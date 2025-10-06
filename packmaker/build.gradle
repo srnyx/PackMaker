@@ -8,10 +8,10 @@
 
 buildscript {
     repositories {
-        jcenter()
+        "https://jcenter.bintray.com/"
     }
     dependencies {
-        classpath 'com.github.jengelman.gradle.plugins:shadow:5.2.0'
+        classpath 'com.gradleup.shadow:shadow-gradle-plugin:8.3.9'
     }
 }
 
@@ -19,7 +19,7 @@ plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     id 'application'
     id 'org.openjfx.javafxplugin' version '0.1.0'
-    id 'com.github.johnrengelman.shadow' version '5.2.0'
+    id 'com.gradleup.shadow' version '8.3.9'
     id 'edu.sc.seis.launch4j' version '3.0.5'
 }
 
@@ -53,7 +53,7 @@ processResources {
 }
 
 def entrypoint = 'com.igrium.packmaker.Launcher'
-mainClassName = entrypoint
+//mainClassName = entrypoint
 
 application {
     // Define the main class for the application.
